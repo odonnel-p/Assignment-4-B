@@ -66,8 +66,8 @@ p{ font-size: .9em;}
     .tea-data-point{ stroke:rgb(0,200,255); }
 .data-line{
     fill:none;
-    stroke-width:2px;
-    stroke:rgb(150,150,150);
+    stroke-width:4px;
+    stroke:rgb(150,150,0);
 }
     .coffee-data-line{ stroke:red; }
     .tea-data-line{ stroke:rgb(0,200,255); }
