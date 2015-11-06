@@ -99,7 +99,23 @@ console.log(data);
             })
             .datum(t.values)
             .attr('d', line)
-            .call(attachTooltip)
+
+        plot.selectAll('d')
+            .data(t.values)
+            .enter()
+            .append('circle')
+            .attr('class',function(){
+                if(t.key=='Tea'){
+                    return 'data-point tea-data-point'
+                } else {
+                    return 'data-point coffee-data-point'
+                }
+            })
+            .attr('r',3)
+            .attr('cx', function(d){return scaleX(d.year);})
+            .attr('cy', function(d){return scaleY(d.value);})
+            .call(attachTooltip) 
+        
 
 
         /*plot.selectAll('drink-line')
